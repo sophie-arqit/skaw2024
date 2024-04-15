@@ -41,11 +41,20 @@
             padding: 0;
         }
         header {
-            background-color: #333;
-            color: #fff;
-            padding: 20px;
+            background-image: url('skaw_reflection.jpg');
+            background-size: cover; /* Cover the entire header area */
+            background-position: center; /* Center the background image */
+            height: 300px; /* Set the height of the header */
+            background-color: rgba(255, 255, 255, 0.2); /* White background with 50% opacity */
+
             text-align: center;
+            font-family: "Montserrat", sans-serif;
         }
+    
+        .main-heading {
+           color: white;
+        }
+
         nav {
             background-color: #444;
             padding: 10px;
@@ -68,6 +77,12 @@
             bottom: 0;
             width: 100%;
         }
+
+        .section-divider {
+            border-top: 1px solid #ccc;
+            margin-top: 20px;
+            margin-bottom: 20px;
+      }
         /* Mobile Styles */
         @media only screen and (max-width: 600px) {
             nav {
@@ -88,9 +103,10 @@
 </head>
 <body>
     <header>
-        <h1>Symmetric Key Agreement Workshop (SKAW) 2024</h1>
-        <h2>Santa Barbara, August 18, 2024</h2>
-        <h3>An affialiated workshop of Crypto 2024</h3>
+        <h1><br></h1>
+        <h1 class="main-heading">Symmetric Key Agreement Workshop (SKAW) 2024</h1>
+        <h2 class="main-heading">Santa Barbara, August 18, 2024</h2>
+        <h3 class="main-heading">An affialiated workshop of Crypto 2024</h3>
     </header>
     <nav>
         <a href="#workshop-description">Workshop Description</a>
@@ -117,8 +133,8 @@
             <li>Protocols that utilize SKA especially those using pre-shared keys; </li>          
             <li>Implementation of symmetric-key schemes. </li>
         </ul>
-
     </section>
+    <div class="section-divider"></div>
     <section id="call-for-proposals">
         <h2>Call for Proposals</h2>
         <!-- Add call for proposals here -->
@@ -133,6 +149,7 @@
         </ul>
         <p>Note that accepted talks will not appear in the Crypto2024 Proceedings. Thus we are happy to accept talks that are submitted elsewhere, including talks on already published topics.</p>        
     </section>
+    <div class="section-divider"></div>
     <section id="keynote">
         <h2>Keynote Speakers</h2>
         <!-- Add talks here -->
@@ -142,6 +159,8 @@
         <h3> TBC, (NSA)</h3>
         <!-- <p><b>Abstract:</b> tbc</p> -->
         <!-- <p><b>Bio:</b></p> -->
+
+    <div class="section-divider"></div>
 
     </section>
 <!--    <section id="talks">
