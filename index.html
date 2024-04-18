@@ -47,12 +47,18 @@
         }
     
         .main-heading {
-           color: white;
+            color: white;
+              text-shadow:
+                -1px -1px 0 #000,
+                 0   -1px 0 #000,
+                 1px -1px 0 #000,
+                 1px  0   0 #000,
+                 1px  1px 0 #000,
+                 0    1px 0 #000,
+                -1px  1px 0 #000,
+                -1px  0   0 #000;
         }
-        .main-heading-two {
-           color: white;
-        }
-
+        
         nav {
             background-color: #444;
             padding: 10px;
@@ -78,8 +84,8 @@
 
         .section-divider {
             border-top: 1px solid #ccc;
-            margin-top: 20px;
-            margin-bottom: 20px;
+            margin-top: 10px;
+            margin-bottom: 10px;
       }
         /* Mobile Styles */
         @media only screen and (max-width: 600px) {
@@ -93,11 +99,7 @@
             section {
                 padding: 10px;
             }
-            .main-heading {
-           color: goldenrod;
-        }
-            .main-heading-two {
-           color: white;
+            
         }
             footer {
                 position: static;
@@ -109,13 +111,15 @@
     <header>
         <h1><br></h1>
         <h1 class="main-heading">Symmetric Key Agreement Workshop (SKAW) 2024</h1>
-        <h2 class="main-heading-two">Santa Barbara, August 18, 2024</h2>
-        <h3 class="main-heading-two">An affialiated workshop of Crypto 2024</h3>
+        <h2 class="main-heading">Santa Barbara, August 18, 2024</h2>
+        <h3 class="main-heading">An affialiated workshop of Crypto 2024</h3>
     </header>
     <nav>
         <a href="#workshop-description">Workshop Description</a>
         <a href="#call-for-proposals">Call for Proposals</a>
         <a href="#keynote ">Keynote Speakers</a>
+        <a href="#dates ">Important Dates</a>
+        <a href="#registration">Registration</a>
         <!-- <a href="#schedule">Schedule</a>-->
         <a href="#committee">Workshop Committee</a>
     </nav>
@@ -177,6 +181,22 @@
         <p>Tbd.</p>
     </section>
 -->
+    <section id="dates">
+        <h2>Important dates</h2>
+        <p>Abstract submission deadline: 2nd June 2024</p>
+        <p>Notification to authors: 17th June 2024 </p>
+        <p>Workshop date: 18th August 2024</p>
+    </section>
+    <div class="section-divider"></div>
+    <section id="registration">
+        <h2>Registration</h2>
+        <p>The workshop is an affiliated event of 
+            <a href="https://crypto.iacr.org/2024/">Crypto 2024</a>.
+             To register to the workshop, please register to CRYPTO 2024, and mark in the registration form the SKAW event.  </p>
+        <p>There is limited funding available to provide free admission to SKAW for university students. Please email <a href="mailto:skawcommittee@gmail.com">skawcommittee@gmail.com</a> if you are eligible. </p>
+    </section>
+    <div class="section-divider"></div>
+
     <section id="committee">
         <h2>Steering Committee</h2>
         <!-- Add committee members here -->
@@ -185,7 +205,7 @@
             <li>Daniel Shiu (Arqit Ltd, UK)</li>              
             <li>Roberta Faux (Arqit Ltd, USA)</li>              
         </ul>
-        <h2>Program Committee</h2>
+        <h3>Program Committee</h3>
         <ul>
             <li>Roberta Faux (Arqit Ltd, USA)</li>                
             <li>Emily Gray (TwoSix Technologies, USA)</li>
@@ -202,7 +222,8 @@
     </section>
 
     <footer>
-        <p>&copy; 2024 SKAW. All rights reserved.</p>
+        <p>&copy; 2024 SKAW. All rights reserved. Photo by <a href="https://unsplash.com/@earl_plannerzone?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Earl Wilcox</a> on <a href="https://unsplash.com/photos/boats-on-dock-under-blue-sky-during-daytime-21zg8Bel860?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash.</a>
+        </p>
     </footer>
 </body>
 </html>
