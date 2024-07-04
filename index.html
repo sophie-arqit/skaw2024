@@ -347,20 +347,7 @@
                 <i>Quantum-secure end-to-end key establishment using Multimodal Cryptography</i>
                 <button class="abstract-button" aria-expanded="false"  onclick="toggleContent(this)">Show Abstract</button>
                 <div class="abstract">
-                    <p>
-                    While classical asymmetric cryptography can be used to establish short-lived ephemeral keys, post- quantum asymmetric schemes do not yet have the kind of long track record that is desired for long- term security environments. On the other hand, key distribution centers relying on more tested symmetric cryptography techniques bear substantial risks related to forward secrecy and identity theft when compromised.
-                    <br>                    
-                    We present a novel protocol that combines symmetric-key, asymmetric-key, and post-quantum cryptography to establish quantum-secure end-to-end encryption keys with extremely strong security properties. Since the various modes of cryptographic operations are strongly interwoven, we refer to it as <i>multimodal cryptography</i>. In short, the protocol is based on a Key Delivery Network consisting of Key Distribution Hubs (KDHs) connected via encrypted links, endpoints enrolled with one or more of these KDHs, retrieval of strong secrets (referred to as <i>pre-key data</i>) from the KDH of the destination endpoint by the source endpoint, and, at a later point in time, a hybrid key exchange between the source and the destination endpoint to establish the final key using also pre- key data collected before. Optionally, QKD can be seamlessly integrated to further fortify the key establishment process.
-                    <br>
-                    The security properties of the protocol include
-                    <ol>
-                        <li>strong computational security of the end-to-end keys even if all asymmetric crypto is broken </li>
-                        <li>strong computational forward secrecy even if all asymmetric crypto and the infrastructure is broken </li>
-                        <li>computational-strength post-compromise security</li>
-                        <li>resilience against endpoint identity theft even if all KDHs are broken. </li>
-                    </ol>   
-                    Security has been shown using a formal security proof in a variant of the eCK model.The resulting keys can be used as pre-shared keys (PSKs) in a number of existing protocols that accept (additional) PSKs, such as TLS or IKEv2, or in proprietary encryption solutions such as line encryptors.
-                </p>
+                   We present a crypto-agile protocol for quantum-secure end-to-end (E2E) encryption key establishment with extremely strong security properties. It is based on a concept that we call multimodal cryptography, which combines various forms of computational cryptography (symmetric-key, asymmetric-key, and post-quantum). If available, quantum key distribution (QKD) can be seamlessly integrated to further fortify the key establishment process. Alternatively, if the availability of QKD is taken as a given, one can consider multimodal cryptography a solution to quantum communication’s last-mile problem.
                 </div>
      
         </li>
