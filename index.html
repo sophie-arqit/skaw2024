@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Workshop Website</title>
+    <title>Symmetric Key Agreement Workshop</title>
     <meta name="description" content="Website for Symmetric Key Agreement Workshop 2024. SKAW is a one day affiliated workshop of Crypto2024.">
     <meta name="keywords" content="Symmetric Key Agreement, Symmetric Key Exchange, SKAW 2024, SKAW, Crypto2024">
 
@@ -87,6 +87,88 @@
             margin-top: 10px;
             margin-bottom: 10px;
       }
+      .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            padding: 20px;
+        }
+        .card {
+            background: #f4f4f4;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+            padding: 20px;
+            text-align: center;
+        }
+        .headshot {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+        .info {
+            font-size: 1.1em;
+            margin-bottom: 15px;
+        }
+        .expandable {
+            display: none;
+            text-align: left;
+        }
+        .expand-button, .abstract-button {
+            background: #007BFF;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            margin-top: 15px;
+        }
+
+        .expand-button:active, .expand-button:focus {
+            outline: none;
+        }
+
+        .program-card {
+            text-align: left;
+        }
+        .program-item {
+            margin-bottom: 15px;
+        }
+        .time {
+            font-weight: bold;
+        }
+        .title {
+            margin-left: 10px;
+            font-style: italic;
+        }
+        .session ol {
+            list-style-type: decimal;
+            padding-left: 20px;
+        }
+        .session li {
+            margin-bottom: 15px;
+        }
+        .abstract {
+            display: none;
+            margin-left: 20px;
+            color: #555;
+        }
+
+        .abstract-button:focus {
+            outline: none;
+        }
+
+        @media (min-width: 768px) {
+            .card {
+                flex: 1;
+            }
+        }
+
         /* Mobile Styles */
         @media only screen and (max-width: 600px) {
             nav {
@@ -104,7 +186,7 @@
             footer {
                 position: static;
             }
-        }
+        
     </style>
 </head>
 <body>
@@ -116,16 +198,15 @@
     </header>
     <nav>
         <a href="#workshop-description">Workshop Description</a>
-        <a href="#call-for-proposals">Call for Proposals</a>
+<!--        <a href="#call-for-proposals">Call for Proposals</a>-->
         <a href="#keynote ">Keynote Speakers</a>
-        <a href="#dates ">Important Dates</a>
+        <a href="#program">Program</a>        
+        <a href="#talks ">Talk Descriptions</a>        
         <a href="#registration">Registration</a>
-        <!-- <a href="#schedule">Schedule</a>-->
         <a href="#committee">Workshop Committee</a>
     </nav>
     <section id="workshop-description">
         <h2>Workshop Description</h2>
-        <!-- Add workshop description here -->
         <p>In the past few decades, asymmetric cryptography has been the rising star of key agreement protocols. In this workshop, we aim to shine light on the secure alternative of Symmetric Key Agreement (SKA).</p>
         <p>There is growing evidence for real-world use cases of SKA by various IETF standards, NIST guidelines, and NSA requirements, including the use of Symmetric Pre-Shared Keys for enhanced quantum-resistant protection. The goal of the SKA Workshop is to examine how symmetric keys can reduce reliance on asymmetric cryptography by providing alternative and/or additional layers of security.  
             We aim to gather academic and industrial experts to discuss the solutions that SKA can offer. </p>
@@ -142,10 +223,181 @@
             <li>Implementation of symmetric-key schemes. </li>
         </ul>
     </section>
+
+    <div class="section-divider"></div>
+    <section id="keynote">
+        <h2>Keynote Speakers</h2>
+        <div class="container">
+            <!-- Speaker 1 -->
+            <div class="card">
+                <img src="skaw_reflection.jpg" alt="Ian Blumenfield" class="headshot" loading="lazy">
+                <div class="info">
+                    <strong>Ian Blumenfield</strong><br>
+                    Two Six Technologies<br>
+                    <em>Formal Analysis for SKA Protocols</em>
+                </div>
+                <button class="expand-button" aria-expanded="false"  onclick="toggleContent(this)">More Info</button>
+                <div class="expandable">
+                    <p><strong>Abstract:</strong> TBD</p>
+                    <p><strong>Bio:</strong> Ian Blumenfeld is the Chief Scientist for Mathematics at Two Six Technologies. In this role he founded and led the High Assurance Solutions research team. Ian has served or serves as principal investigator on several DARPA programs related to formal methods, including DRPIVE, PACE, and PROVERS. He was an applied research mathematician in NSA’s R2 group, where he focused on formally verifying the correctness of cryptographic software for mission applications. Prior to joining TST, Ian was a founder of the crypto hardware formal verification team at Apple, where he used formal techniques to verify the functionality of the iPhone Secure Enclave Processor.</p>
+                </div>
+            </div>
+        
+            <!-- Speaker 2 (add similar structure for the second speaker) -->
+            <div class="card">
+                <img src="adrian_stanger.jpg" alt="Adrian Stanger" class="headshot" loading="lazy">
+                <div class="info">
+                    <strong>Adrian Stanger</strong><br>
+                    National Security Agency (NSA)<br>
+                    <em>Talk Title TBD</em>
+                </div>
+                <button class="expand-button" aria-expanded="false" onclick="toggleContent(this)">More Info</button>
+                <div class="expandable">
+                    <p><strong>Abstract:</strong> Talk Abstract</p>
+                    <p><strong>Bio:</strong> Dr Stanger currently serves as the Cybersecurity Directorate (CSD) Senior Cryptographic Authority. In this position he continues to work to anticipate and prevent cyber threats with a focus on cryptography. He works with allies and partners to ensure secure interoperable solutions are fielded, provides coordination on cryptographic topics internally and externally, and coaches and mentors security analysts. He has been involved in cryptographic strategy for CSD for nearly a decade.  </p>
+                </div>
+            </div>
+        </div>
+
+
+        
+    </section>
+    <div class="section-divider"></div>
+
+    <section id="program">
+    <div class="container">
+        <div class="program-card">
+            <h2>Program</h2>
+            <div class="program-item">
+                <span class="time">9:00am</span>
+                <span class="title">Registration</span>
+            </div>
+            <div class="program-item">
+                <span class="time">9:30am</span>
+                <span class="title">Workshop welcome</span>
+            </div>
+            <div class="program-item">
+                <span class="time">9:45am</span>
+                <span class="title">KEYNOTE: Adrian Stanger</span>
+            </div>
+            <div class="program-item">
+                <span class="time">10:45am</span>
+                <span class="title">Coffee break</span>
+            </div>
+            <div class="program-item">
+                <span class="time">11:15am</span>
+                <span class="title">Session One </span>
+            </div>
+            <div class="program-item">
+                <span class="time">12pm</span>
+                <span class="title">Lunch break</span>
+            </div>
+            <div class="program-item">
+                <span class="time">1:30pm</span>
+                <span class="title">KEYNOTE: Ian Blumenfeld</span>
+            </div>
+            <div class="program-item">
+                <span class="time">2:30pm</span>
+                <span class="title">Coffee break</span>
+            </div>
+            <div class="program-item">
+                <span class="time">3:00pm</span>
+                <span class="title">Session Two</span>
+            </div>
+            <div class="program-item">
+                <span class="time">3:45pm</span>
+                <span class="title">TBD</span>
+            </div>
+        </div>
+    </div>
+    </section>
+<!--
+    <section id="dates">
+        <h2>Important dates</h2>
+        <p>Abstract submission deadline: <b><s>2nd June</s> 9th June 2024</b></p>
+        <p>Notification to authors: <b>17th June 2024</b> </p>
+        <p>Workshop date: <b></b>18th August 2024</b></p>
+    </section>
+-->
+<div class="session">
+    <section id = "talks">
+        <h2>Talk Descriptions</h2>
+        <h3>Session One  </h3>
+        <ol>
+        <li>
+            <b>Conor Spangler</b>, Arqit. 
+            <i>13 ways to establish keys using symmetric methods, and why you might want more</i>
+            <button class="abstract-button" aria-expanded="false"  onclick="toggleContent(this)">Show Abstract</button>
+            <div class="abstract">We examine the methods of the ISO/IEC 11770-2 which cover point-to-point, key distribution and key translation. We will consider the security properties of the methods as laid out in the standard and a more comprehensive list from academic proposals. We will also consider more abstract security goals such as zero trust, defence in depth, and cryptographic agility and usability metrics such as round trip count and number of calls to primitives. We will see how existing symmetric key methods can be described under the framework and how other proposals could be similarly evaluated.</div>
+ 
+        </li>
+        </li>
+        <li><b>Manfred von Willich </b>, QuantumBridge.
+            <i>Distributed Symmetric Key Establishment”</i>
+            <button class="abstract-button" aria-expanded="false"  onclick="toggleContent(this)">Show Abstract</button>
+            <div class="abstract">TBD</div>
+ 
+        </li>
+        </li>
+        </ol>
+        <h3>Session Two  </h3>
+        <ol>
+            <li>
+                <b>David Jao</b>, EvolutionQ. 
+                <i>Quantum-secure end-to-end key establishment using Multimodal Cryptography</i>
+                <button class="abstract-button" aria-expanded="false"  onclick="toggleContent(this)">Show Abstract</button>
+                <div class="abstract">
+                    <p>
+                    While classical asymmetric cryptography can be used to establish short-lived ephemeral keys, post- quantum asymmetric schemes do not yet have the kind of long track record that is desired for long- term security environments. On the other hand, key distribution centers relying on more tested symmetric cryptography techniques bear substantial risks related to forward secrecy and identity theft when compromised.
+                    <br>                    
+                    We present a novel protocol that combines symmetric-key, asymmetric-key, and post-quantum cryptography to establish quantum-secure end-to-end encryption keys with extremely strong security properties. Since the various modes of cryptographic operations are strongly interwoven, we refer to it as <i>multimodal cryptography</i>. In short, the protocol is based on a Key Delivery Network consisting of Key Distribution Hubs (KDHs) connected via encrypted links, endpoints enrolled with one or more of these KDHs, retrieval of strong secrets (referred to as <i>pre-key data</i>) from the KDH of the destination endpoint by the source endpoint, and, at a later point in time, a hybrid key exchange between the source and the destination endpoint to establish the final key using also pre- key data collected before. Optionally, QKD can be seamlessly integrated to further fortify the key establishment process.
+                    <br>
+                    The security properties of the protocol include
+                    <ol>
+                        <li>strong computational security of the end-to-end keys even if all asymmetric crypto is broken </li>
+                        <li>strong computational forward secrecy even if all asymmetric crypto and the infrastructure is broken </li>
+                        <li>computational-strength post-compromise security</li>
+                        <li>resilience against endpoint identity theft even if all KDHs are broken. </li>
+                    </ol>   
+                    Security has been shown using a formal security proof in a variant of the eCK model.The resulting keys can be used as pre-shared keys (PSKs) in a number of existing protocols that accept (additional) PSKs, such as TLS or IKEv2, or in proprietary encryption solutions such as line encryptors.
+                </p>
+                </div>
+     
+        </li>
+            </li>
+            <li><b>Christopher Batterbee</b>, University of Sorbonne.
+                <i>Muckle++: Improved Quantum-Secure Hybrid Key Exchange”</i>
+                <button class="abstract-button" aria-expanded="false" onclick="toggleContent(this)">Show Abstract</button>
+                <div class="abstract">End-to-end authenticity in public networks plays a significant role. Namely, without
+                    authenticity, the adversary might be able to retrieve even confidential information straight away by
+                    impersonating others. Proposed solutions to establish an authenticated channel cover pre-shared keybased, 
+                    password-based, and certificate-based techniques. To add confidentiality to an authenticated channel, authenticated key exchange (AKE) protocols usually have one of the three solutions built in. As an amplification, hybrid AKE (HAKE) approaches are getting more popular nowadays and were presented in several flavors to incorporate  classical, post-quantum, or quantum-key-distribution components. The main benefit is redundancy, i.e., if some of the components fail, the primitive still yields a confidential and authenticated channel. 
+                    <br>
+                    At PQCrypto20, Dowling, Brandt, Hansen, and Paterson introduced a new modular framework for designing HAKE and presented a first instantiation, dubbed Muckle, requires pre-shared keys (and hence yields inefficient end-to-end authenticity). Recently (at PQCrypto23), Bruckner, Ramacher and Striecks proposed  a new extended instantiation called Muckle+, that utilizes post-quantum digital signatures. In this talk, we will present Muckle++ that extends previous works by using post-quantum KEM for authentication. While replacing pre-shared keys with public-key authenticators is rather straightforward, the challenge is to derive the proof in the HAKE framework. As emphasised in KEMTLS, the main motivation is that pq KEM turn to be more efficient than pq signature schemes. 
+                <br>
+                    Joint work with  Sebastian Ramacher, Christoph Striecks, Ludovic Perret.</div>
+     
+        </li>
+            </li>
+       </ol>
+    
+    </section>
+    </div>
+    <div class="section-divider"></div>
+    <section id="registration">
+        <h2>Registration</h2>
+        <p>The workshop is an affiliated event of 
+            <a href="https://crypto.iacr.org/2024/">Crypto 2024</a>.
+             To register to the workshop, please register to CRYPTO 2024, and mark in the registration form the SKAW event.  </p>
+        <p>There is limited funding available to provide free admission to SKAW for university students. Please email <a href="mailto:skawcommittee@gmail.com">skawcommittee@gmail.com</a> if you are eligible. </p>
+    </section>
+    <div class="section-divider"></div>
+
+<!--
     <div class="section-divider"></div>
     <section id="call-for-proposals">
         <h2>Call for Proposals</h2>
-        <!-- Add call for proposals here -->
+    
         <p>We are seeking speakers giving talks on themes related to the scope of the Symmetric Key Agreement Workshop.
             We are seeking a mix of academia, public sector and private sector speakers and audience. Talks will be 25 minutes long. </p>
         <p>Please submit talk proposals by midnight AOE <s>June 2</s> June 9, 2024 to <a href="mailto:skawcommittee@gmail.com"> skawcommittee@gmail.com</a>. Notifications of acceptance will be sent on or before June 17. <br><br>
@@ -157,45 +409,8 @@
         </ul>
         <p>Note that accepted talks will not appear in the Crypto2024 Proceedings. Thus we are happy to accept talks that are submitted elsewhere, including talks on already published topics.</p>        
     </section>
-    <div class="section-divider"></div>
-    <section id="keynote">
-        <h2>Keynote Speakers</h2>
-        <!-- Add talks here -->
-        <h3>Ian Blumenfeld (Two Six Technologies)</h3>
-        <!-- <p><b>Abstract:</b> tbc</p> -->
-        <!-- <p><b>Bio:</b></p> -->
-        <h3> Adrian Stanger, (NSA)</h3>
-        <!-- <p><b>Abstract:</b> tbc</p> -->
-        <!-- <p><b>Bio:</b></p> -->
-
-    <div class="section-divider"></div>
-
-    </section>
-<!--    <section id="talks">
-        <h2>Talks and Abstracts</h2>
-        <p>
-        </p>p
-    </section>
-    <section id="schedule">
-        <h2>Schedule</h2>
-        <p>Tbd.</p>
-    </section>
 -->
-    <section id="dates">
-        <h2>Important dates</h2>
-        <p>Abstract submission deadline: <b><s>2nd June</s> 9th June 2024</b></p>
-        <p>Notification to authors: <b>17th June 2024</b> </p>
-        <p>Workshop date: <b></b>18th August 2024</b></p>
-    </section>
-    <div class="section-divider"></div>
-    <section id="registration">
-        <h2>Registration</h2>
-        <p>The workshop is an affiliated event of 
-            <a href="https://crypto.iacr.org/2024/">Crypto 2024</a>.
-             To register to the workshop, please register to CRYPTO 2024, and mark in the registration form the SKAW event.  </p>
-        <p>There is limited funding available to provide free admission to SKAW for university students. Please email <a href="mailto:skawcommittee@gmail.com">skawcommittee@gmail.com</a> if you are eligible. </p>
-    </section>
-    <div class="section-divider"></div>
+
 
     <section id="committee">
         <h2>Steering Committee</h2>
@@ -225,5 +440,21 @@
         <p>&copy; 2024 SKAW. All rights reserved. Photo by <a href="https://unsplash.com/@earl_plannerzone?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Earl Wilcox</a> on <a href="https://unsplash.com/photos/boats-on-dock-under-blue-sky-during-daytime-21zg8Bel860?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash.</a>
         </p>
     </footer>
+
+    <script>
+        function toggleContent(button) {
+            var content = button.nextElementSibling;
+            if (content.style.display === "none" || content.style.display === "") {
+                content.style.display = "block";
+                button.textContent = "Hide";
+                button.setAttribute("aria-expanded", "true");
+            } else {
+                content.style.display = "none";
+                button.textContent = "Show";
+                button.setAttribute("aria-expanded", "false");
+            }
+}
+
+    </script>   
 </body>
 </html>
